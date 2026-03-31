@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { Stopwatch } from './stopwatch/stopwatch';
+import { Quiz } from './quiz/quiz';
+// import { Stopwatch } from './stopwatch/stopwatch';
 
 @Component({
   selector: 'app-root',
-  imports: [Stopwatch],
+  imports: [Quiz],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
