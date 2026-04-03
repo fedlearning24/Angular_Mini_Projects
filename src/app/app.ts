@@ -1,10 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { Quiz } from './quiz/quiz';
-// import { Stopwatch } from './stopwatch/stopwatch';
+import { PasswordGenerator } from './password-generator/password-generator';
 
 @Component({
   selector: 'app-root',
-  imports: [Quiz],
+  imports: [PasswordGenerator],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

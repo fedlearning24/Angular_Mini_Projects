@@ -36,7 +36,6 @@ export class Quiz {
     if (option === this.currentQuestion().answer) {
       this.score.update(s => s + 1);
     }
-
     if (this.currentIndex() < this.questions.length - 1) {
       this.currentIndex.update(i => i + 1);
     }else{
