@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { PasswordGenerator } from './password-generator/password-generator';
+import { ChatUi } from './chat-ui/chat-ui';
 
 @Component({
   selector: 'app-root',
-  imports: [PasswordGenerator],
+  imports: [ChatUi],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
