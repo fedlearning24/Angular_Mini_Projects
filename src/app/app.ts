@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { ChatUi } from './chat-ui/chat-ui';
+import { Github } from './github/github';
 
 @Component({
   selector: 'app-root',
-  imports: [ChatUi],
+  imports: [Github],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
