@@ -1,0 +1,31 @@
+<div class="max-w-md mx-auto p-6">
+    <h1 class="text-2xl font-bold mb-4">Voting App</h1>
+    <div class="flex gap-2 mb-4">
+        <input [(ngModel)]="newOption" class="border p-2 rounded w-full" placeholder="Add option..." />
+        <button (click)="addOption()" class="bg-black text-white px-4 rounded">
+            Add
+        </button>
+    </div>
+
+    @for(option of store.options(); track option.id){
+    <div class="bg-gray-100 p-3 rounded mb-2">
+        <div class="flex justify-between">
+            <span>{{option.text}}</span>
+            <span>{{option.votes}} votes</span>
+        </div>
+
+        <button (click)="store.vote(option.id)" class="mt-2 bg-blue-500 text-white px-3 py-1 rounded text-sm">
+            Vote
+        </button>
+
+        <div class="w-full bg-gray-300 h-2 mt-2 rounded">
+            <div class="bg-green-500 h-2 rounded" [style.width.%]="getPercentage(option.votes)">
+            </div>
+        </div>
+    </div>
+    }
+    
+    <div class="mt-4 font-bold">
+        Total Votes : {{store.totalVotes()}}
+    </div>
+</div>

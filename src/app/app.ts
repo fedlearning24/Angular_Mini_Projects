@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { Github } from './github/github';
+import { Votes } from './votes/votes';
 
 @Component({
   selector: 'app-root',
-  imports: [Github],
+  imports: [Votes],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
