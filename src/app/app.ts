@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { Votes } from './votes/votes';
+import { Notes } from './notes/notes';
 
 @Component({
   selector: 'app-root',
-  imports: [Votes],
+  imports: [Notes],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
