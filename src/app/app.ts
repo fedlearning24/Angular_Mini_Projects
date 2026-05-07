@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { Notes } from './notes/notes';
+import { MiniCart } from './mini-cart/mini-cart';
 
 @Component({
   selector: 'app-root',
-  imports: [Notes],
+  imports: [MiniCart],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -1,0 +1,36 @@
+<div class="text-center mt-10">
+    <h1 class="text-3xl">Cart : {{count()}}</h1>
+</div>
+
+<div class="grid md:grid-cols-2 gap-6 p-2">
+    <div>
+        <h2 class="text-xl font-bold bg-blue-200 mb-4">Products</h2>
+        <div class="space-y-3">
+            @for(p of products; track p){
+            <div class="p-4 bg-white shadow rounded flex justify-between">
+                <div>
+                    <p class="font-sembold">{{p.name}}</p>
+                    <p>₹{{p.price}}</p>
+                </div>
+                <button class="bg-blue-500 text-white px-3 rounded" (click)="addToCart(p)">
+                    Add
+                </button>
+            </div>
+            }
+        </div>
+    </div>
+
+    <div>
+        <h2 class="text-xl font-bold bg-blue-200 mb-4">Cart</h2>
+        @for(item of cart(); track item; let i = $index){
+        <div class="flex justify-between p-3 bg-gray-200 rounded mb-2">
+            <span>{{item.name}}</span>
+            <button class="text-red-500" (click)="removeFormCart(i)">Remove</button>
+        </div>
+        }
+
+        <p class="mt-4 text-lg font-bold">
+            Total : ₹{{total()}}
+        </p>
+    </div>
+</div>
