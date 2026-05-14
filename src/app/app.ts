@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { MiniCart } from './mini-cart/mini-cart';
+import { TrafficSignal } from './traffic-signal/traffic-signal';
 
 @Component({
   selector: 'app-root',
-  imports: [MiniCart],
+  imports: [TrafficSignal],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
